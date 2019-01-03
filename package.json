@@ -9,7 +9,32 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "jest": "jest",
+    "jest:watch": "jest --watch"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/jest-config/",
+      "/node_modules/"
+    ],
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/jest-config/setup.ts",
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-preset-angular/AngularSnapshotSerializer.js",
+      "<rootDir>/node_modules/jest-preset-angular/HTMLCommentSerializer.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/storybook-static/"
+    ],
+    "transform": {
+      "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "private": true,
   "dependencies": {
@@ -35,6 +60,7 @@
     "@storybook/addon-actions": "^4.1.4",
     "@storybook/addon-links": "^4.1.4",
     "@storybook/addon-notes": "^4.1.4",
+    "@storybook/addon-storyshots": "^4.1.4",
     "@storybook/addons": "^4.1.4",
     "@storybook/angular": "^4.1.4",
     "@types/jasmine": "~2.8.6",
@@ -43,8 +69,11 @@
     "babel-loader": "^8.0.4",
     "codelyzer": "^4.5.0",
     "css-loader": "^2.1.0",
+    "identity-obj-proxy": "^3.0.0",
     "jasmine-core": "^3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
+    "jest": "^23.6.0",
+    "jest-preset-angular": "^6.0.2",
     "karma": "^3.1.4",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.4",
