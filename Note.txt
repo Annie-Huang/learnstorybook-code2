@@ -5,6 +5,9 @@ https://github.com/chromaui/learnstorybook-code
 https://github.com/Annie-Huang/learnstorybook-code
 https://github.com/Annie-Huang/learnstorybook-code2
 
+
+https://stackoverflow.com/questions/39058075/cant-bind-to-ngif-since-it-isnt-a-known-property-of-div
+
 ###################################################################
 
 Get started
