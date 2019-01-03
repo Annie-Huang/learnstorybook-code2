@@ -1,5 +1,14 @@
+https://www.learnstorybook.com/angular/en/get-started/
 https://www.learnstorybook.com/
 
 https://github.com/chromaui/learnstorybook-code
 https://github.com/Annie-Huang/learnstorybook-code
 https://github.com/Annie-Huang/learnstorybook-code2
+
+###################################################################
+
+Get started
+===============
+D:\Temp\learnstorybook-code2>npx -p @storybook/cli sb init
+
+D:\Temp\learnstorybook-code2>npm remove --save example; npm remove --save-dev example     << run this to reorder devdependencies list, for some reason the above command just put the new package in the end of the list.
